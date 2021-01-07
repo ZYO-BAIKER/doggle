@@ -7,7 +7,7 @@
   display: flex;
   background: #00000038;
   padding: 20px 10px;
-  background-color: rgb(255 248 218 / 79%);
+  background-color: lightyellow;
 }
 
 .flower {
@@ -47,6 +47,6 @@
 
 .list-item {
   text-decoration: none;
-  color:  rgba(43, 31, 31, 0.5);
+  color:  lightsalmon;
   margin: 0 2vw;
 }
