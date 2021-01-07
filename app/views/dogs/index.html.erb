@@ -1,0 +1,12 @@
+<%= render "shared/header" %>
+<div class='contents'>
+  <h2 class='title'>近所のイヌ友を探す</h2>
+  <div class='search-bar-contents'>
+    <%= form_with(url: "/", local: true, method: :get, class: "search-form") do |form| %>
+      <%= form.text_field :keyword, placeholder: '都道府県と市町村区を入力して下さい', class: 'input-box' %>
+      <button class="search-button">
+          <%= image_tag "search.png", class:"search-icon" %>
+      </button>
+    <% end %>
+  </div>
+</div>

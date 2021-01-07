@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+.top-page-header {
+  width: 100vw;
+  display: flex;
+  background: #00000038;
+  padding: 20px 10px;
+  background-color: rgb(255 248 218 / 79%);
+}
+
+.flower {
+  position: absolute;
+  top: 0;
+}
+
+.flower.flowerL {
+  left: 0;
+}
+
+.flower.flowerR {
+  transform: scale(-1, 1);
+  right: 0;
+}
+
+.header-image {
+  margin-left: 240px;
+}
+
+.pettle-icon {
+  width: 12vw;
+  
+}
+
+.nav {
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 2vh 0;
+}
+
+.lists-right {
+  display: flex;
+  list-style: none;
+  font-size: 23px;
+}
+
+.list-item {
+  text-decoration: none;
+  color:  rgba(43, 31, 31, 0.5);
+  margin: 0 2vw;
+}
