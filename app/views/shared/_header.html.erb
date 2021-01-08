@@ -1,18 +1,29 @@
 <div class="flower flowerR">
   <%= link_to image_tag("top_flower.png", width:"257") %>
 </div>
+
 <div class="flower flowerL">
   <%= link_to image_tag("top_flower.png", width:"257")%>
 </div>
+
 <header class='top-page-header'>
+
   <div class="header-image">
     <%= link_to image_tag("xoxo.png", class:"pettle-icon"), '/' %>
   </div>
+
   <div class='nav'>
     <ul class='lists-right'>
-        <li><%= link_to 'DOGGLEとは', "/", class: "list-item" %></li>
-        <li><%= link_to '新規登録', "/", class: "list-item" %></li>
-        <li><%= link_to 'ログイン', "/", class: "list-item" %></li>
+        <li><%= link_to 'PETTLEとは', "/", class: "list-item" %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname,"/", class: "list-item" %> </li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "list-item" %></li>
+        <li><%= link_to "退会", user_registration_path, method: :delete, data: { confirm: "アカウント消すの？" }, class: "list-item" %></li>
+      <% else %>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "list-item" %></li>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "list-item" %></li>
+      <% end %>
     </ul>
   </div>
+
 </header>
