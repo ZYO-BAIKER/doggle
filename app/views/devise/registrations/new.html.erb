@@ -38,7 +38,7 @@
     </div>
 
     <div class="form-select">
-      <%# f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"user-prefecture"}) %>
+      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"user-prefecture"}) %>
     </div>
 
     <div class="form-group">
@@ -50,8 +50,8 @@
     </div>
 
     <div class="form-select">
-      <%# f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box", id:"user-sex"}) %>
-      <%# f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"user-age"}) %>
+      <%= f.collection_select(:sex_id, Sex.all, :id, :name, {}, {class:"select-box", id:"user-sex"}) %>
+      <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box", id:"user-age"}) %>
     </div>
 
     <div class='register-btn'>
