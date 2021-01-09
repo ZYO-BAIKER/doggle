@@ -1,0 +1,42 @@
+<%= render "shared/header" %>
+
+<div class='contents'>
+  <%= form_with(model: @dog, local: true) do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        ワンちゃんの画像
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてイメージファイルをアップ
+        </p>
+        <%= f.file_field :image, id:"dog-image" %>
+        <div id="image-list"></div>
+      </div>
+    </div>
+
+    <div class="new-dogs">
+      <div class="weight-bold-text">プロフィール</div>
+      <%= f.text_field :name, class:"dogs-text", id:"dogs-name", placeholder:"ワンちゃんのお名前", maxlength:"20" %>
+
+      <div class="dogs-deta">
+        <%= f.collection_select(:type_id, Type.all, :id, :name, {}, {class:"select-box", id:"dog-type"}) %>
+        <%= f.collection_select(:dog_sex_id, DogSex.all, :id, :name, {}, {class:"select-box", id:"dog-sex"}) %>
+      </div>
+
+      <div class="dogs-explain">
+        <div class="weight-bold-text">
+          特徴、嗜好、性格など
+        </div>
+        <%= f.text_area :description, class:"dogs-text", id:"item-info", placeholder:"（必須 1,000文字まで）例）３歳で人懐っこいです。テレビを凝視する事が多いです。" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+
+    <div class="register-btn">
+      <%= f.submit "入力完了" ,class:"reg-btn" %>
+    </div>
+
+  <% end %>
+</div>
