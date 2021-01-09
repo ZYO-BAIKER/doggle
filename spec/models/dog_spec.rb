@@ -14,27 +14,27 @@ RSpec.describe Dog, type: :model do
     it 'imageが空では保存できない' do
       @dog.image = nil
       @dog.valid?
-      expect(@dog.errors.full_messages).to include("Image can't be blank")
+      expect(@dog.errors.full_messages).to include("ワンちゃんの画像を入力してください")
     end
     it 'nameが空では保存できないこと' do
       @dog.name = nil
       @dog.valid?
-      expect(@dog.errors.full_messages).to include("Name can't be blank")
+      expect(@dog.errors.full_messages).to include("ワンちゃんのお名前を入力してください")
     end
     it 'typeがid_1では保存できないこと' do
       @dog.type_id = 1
       @dog.valid?
-      expect(@dog.errors.full_messages).to include('Type must be other than 1')
+      expect(@dog.errors.full_messages).to include('犬種を選んで下さい')
     end
     it 'dog_sexがid_1では保存できないこと' do
       @dog.dog_sex_id = 1
       @dog.valid?
-      expect(@dog.errors.full_messages).to include('Dog sex must be other than 1')
+      expect(@dog.errors.full_messages).to include('ワンちゃんの性別を選んで下さい')
     end
     it 'descriptionが空では保存できないこと' do
       @dog.description = nil
       @dog.valid?
-      expect(@dog.errors.full_messages).to include("Description can't be blank")
+      expect(@dog.errors.full_messages).to include("ワンちゃんの「特徴、嗜好、性格」などを入力してください")
     end
 
   end
