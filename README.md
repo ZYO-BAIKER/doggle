@@ -60,6 +60,8 @@ https://doogle-28664.herokuapp.com/
 | Column       |    Type    | Options     |
 | -------------| ---------- | ----------- |
 | name         | string     | null: false |
+| sex_id       | integer    | null: false |
+| type_id      | integer    | null: false |
 | description  | text       | null: false |
 | user         | references | null: false, foreign_key: true |
 
