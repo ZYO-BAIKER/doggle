@@ -11,9 +11,9 @@ class User < ApplicationRecord
   validates :city,  presence: true
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-  validates_format_of :password, with: PASSWORD_REGEX, message: 'Include both letters and numbers'
+  validates_format_of :password, with: PASSWORD_REGEX, message: 'は半角英数字混合で入力して下さい'
 
-  with_options numericality: { other_than: 1 } do
+  with_options numericality: { other_than: 1, message: 'を選んで下さい' } do
     validates :sex_id, :age_id, :prefecture_id
   end
   
