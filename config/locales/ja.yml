@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        email: メールアドレス
+        prefecture_id: 都道府県
+        city: 市区町村
+        sex_id: 性別
+        age_id: 年齢層
+
+      dog:
+        image: ワンちゃんの画像
+        name: ワンちゃんのお名前
+        type_id: 犬種
+        dog_sex_id: ワンちゃんの性別
+        description: ワンちゃんの「特徴、嗜好、性格」など
