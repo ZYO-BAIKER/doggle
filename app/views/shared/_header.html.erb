@@ -16,7 +16,7 @@
     <ul class='lists-right'>
         <li><%= link_to 'PETTLEとは', "/", class: "list-item" %></li>
       <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname,"/", class: "list-item" %> </li>
+        <li><%= link_to current_user.nickname, user_path(current_user), class: "list-item" %> </li>
         <li><%= link_to "愛犬を紹介", new_dog_path, class: "list-item" %> </li>
         <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "list-item" %></li>
         <li><%= link_to "退会", user_registration_path, method: :delete, data: { confirm: "アカウント消すの？" }, class: "list-item" %></li>
