@@ -1,5 +1,7 @@
 class DogsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
   before_action :set_dog, only: [:edit, :update, :destroy]
+  before_action :return, only: [:edit, :update]
 
   def index
   end
@@ -46,6 +48,10 @@ class DogsController < ApplicationController
 
   def set_dog
     @dog = Dog.find(params[:id])
+  end
+
+  def return
+    redirect_to root_path unless user_signed_in? && current_user.id == @dog.user_id
   end
 
 end
