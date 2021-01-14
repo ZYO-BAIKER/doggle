@@ -1,7 +1,7 @@
 class DogsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
-  before_action :set_dog, only: [:edit, :update, :destroy]
-  before_action :return, only: [:edit, :update]
+  before_action :set_dog, only: [:show, :edit, :update, :destroy]
+  before_action :return, only: [:edit]
 
   def index
   end
@@ -18,6 +18,10 @@ class DogsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @dog = Dog.where(id: params[:id])
   end
 
   def edit

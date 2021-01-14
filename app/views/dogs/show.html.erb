@@ -1,0 +1,13 @@
+<%= render "shared/header"%>
+
+  <div class='registration-main'>
+
+    <div class='form-wrap'>
+
+      <% @dog.each do |dog| %>
+        <%= render partial: "dog", locals: { dog: dog } %>    
+      <% end %>
+
+    </div>
+
+  </div>

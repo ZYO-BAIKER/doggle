@@ -1,0 +1,24 @@
+
+<% if dog.dog_sex_id == 2 %>
+  <h1><%= dog.name %>ちゃんのページ</h1>
+<% elsif dog.dog_sex_id == 3 %>
+  <h1><%= dog.name %>くんのページ</h1>
+<% end %>
+
+<div class='dog-img-content'>
+  <%= image_tag dog.image, class: "dog-img" %>
+</div>
+
+<div class="form-group">
+  <label class="form-text">犬種</label>
+  <h2><%= dog.type.name %></h2>
+</div>
+
+<div class="form-group">
+  <label class="form-text">性別</label>
+  <h2><%= dog.dog_sex.name %></h2>
+</div>
+
+<% if user_signed_in? && dog.user_id == current_user.id %>
+  <h2><%= link_to "プロフィール編集",  edit_dog_path(dog.id) %></h2>
+<% end %>
