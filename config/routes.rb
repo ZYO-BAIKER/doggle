@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   resources :dogs do
     resources :comments, only:[:create,:update,:destroy]
-    end
   end
 
 end

@@ -15,14 +15,6 @@ form input, form textarea {
   font-family: "游ゴシック", "YuGothic";
 }
 
-form input[type="submit"] {
-  background-color: #57C3E9;
-  border-radius: 20px;
-  color: #fff;
-  border: 0;
-  font-size: 18px;
-}
-
 h4 {
   line-height: 1.57;
   letter-spacing: 0.15em;
