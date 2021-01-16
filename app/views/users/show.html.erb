@@ -43,11 +43,7 @@
 
         <div class="form-group">
           <label class="form-text">ワンちゃんのお名前</label>
-            <% if user_signed_in? && @user == current_user %>
-              <h2><%= link_to dog.name,  dog_path(dog.id) %></h2>
-            <% else %>
-              <h2><%= dog.name %></h2>
-            <% end %>
+            <h2><%= link_to dog.name,  dog_path(dog.id) %></h2>
         </div>
 
         <div class="form-group">

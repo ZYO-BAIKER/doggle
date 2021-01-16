@@ -4,10 +4,44 @@
 
     <div class='form-wrap'>
 
-      <% @dog.each do |dog| %>
+      <% @dogs.each do |dog| %>
         <%= render partial: "dog", locals: { dog: dog } %>    
       <% end %>
 
     </div>
+    
+    <div class="comment-box">
 
+      <% if user_signed_in? %>
+
+        <%= form_with(model: [@dog, @comment], local: true) do |form| %>
+          <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+          <%= form.submit "SEND", id: "submit-btn" %>
+        <% end %>
+      
+      <% else %>
+        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+      <% end %>
+
+            <h4>＜コメント一覧＞</h4>
+
+      <div class="comments" id='comments'>
+
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+
+            <% if current_user.id == comment.user_id %>
+              <%= link_to ":削除", "/dogs/#{@dog.id}/comments/#{comment.id}", method: :delete %>
+            <% end %>
+          </p>
+          <% end %>
+        <% end %>
+  
+      </div>
+    
+    </div>
+    
   </div>

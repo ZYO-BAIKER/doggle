@@ -21,7 +21,9 @@ class DogsController < ApplicationController
   end
 
   def show
-    @dog = Dog.where(id: params[:id])
+    @dogs = Dog.where(id: params[:id])
+    @comment = Comment.new
+    @comments = @dog.comments.includes(:user).order(id: 'DESC')
   end
 
   def edit
