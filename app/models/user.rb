@@ -19,5 +19,7 @@ class User < ApplicationRecord
   with_options numericality: { other_than: 1, message: 'を選んで下さい' } do
     validates :sex_id, :age_id, :prefecture_id
   end
+
+  mount_uploader :image, ImageUploader
   
 end
