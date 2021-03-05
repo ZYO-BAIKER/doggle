@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2021_01_14_094007) do
     t.string "city", null: false
     t.integer "sex_id", null: false
     t.integer "age_id", null: false
+    t.string "image", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
