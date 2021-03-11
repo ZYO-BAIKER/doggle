@@ -7,15 +7,12 @@
 
     <%= form_with(url: "/", local: true, method: :get, class: "search-form") do |form| %>
 
-      <div class="form-select">
-        <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"user-prefecture"}) %>
+      <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"user-prefecture"}) %>
+
+      <div class="search-city">
+        <%= form.text_field :keyword, placeholder: '市町村区を入力して下さい', class: 'input-box' %>
+        <button class="search-button"> <%= image_tag "search.png", class:"search-icon" %> </button>
       </div>
-
-      <%= form.text_field :keyword, placeholder: '市町村区を入力して下さい', class: 'input-box' %>
-
-      <button class="search-button">
-          <%= image_tag "search.png", class:"search-icon" %>
-      </button>
       
     <% end %>
 

@@ -1,17 +1,14 @@
 <%= render "shared/header" %>
 
-<div class='contents'>
+<div class='registration-dog'>
   <%= form_with(model: @dog, local: true) do |f| %>
   <%= render 'shared/error_messages', model: f.object %>
 
+  <div class='form-wrap'>
+
     <div class="img-upload">
-      <div class="weight-bold-text">
-        ワンちゃんの画像
-      </div>
       <div class="click-upload">
-        <p>
-          クリックしてイメージファイルをアップ
-        </p>
+        <p>ワンちゃんの画像をアップしてください</p>
         <%= f.file_field :image, id:"dog-image" %>
         <div id="image-list"></div>
       </div>
@@ -37,6 +34,8 @@
     <div class="register-btn">
       <%= f.submit "入力完了" ,class:"reg-btn" %>
     </div>
+  
+  </div>
 
   <% end %>
 </div>

@@ -1,0 +1,101 @@
+#dog-show {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  background-image: url("../bg.gif");
+  background-size: cover;
+}
+
+#dog-show >.dog-info {
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 25px;
+}
+
+.dog-info h1 {
+  text-align: center;
+  font-size: x-large;
+  font-weight: revert;
+}
+
+.dog-icon {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dog-info > .profile-group {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.dog-explain-box {
+  margin: 0 auto;
+  width: 50%;
+  height: 200px;
+}
+
+.dog-explain-box textarea {
+  width: 100%;
+  height: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+  background-color: unset;
+}
+
+.dog-img {
+  width: 30%; 
+}
+
+.profile-edit {
+  font-size: 20px;
+}
+
+#dog-show > .comment-box {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 2%;
+  background-color: unset;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
+  box-sizing: border-box;
+}
+
+.comment-box > form {
+  margin: 0 auto;
+  width: 80%;
+}
+
+form input, form textarea {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+.comment-box > h4 {
+  line-height: 1.57;
+  letter-spacing: 0.15em;
+  font-size: 16px;
+  color: coral;
+  font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+  margin: 0;
+}
+
+.comments {
+  padding: 5px;
+  margin-top: 15px;
+  left: 20px;
+}
+
+.comments a {
+  color: #57C3E9;
+}
