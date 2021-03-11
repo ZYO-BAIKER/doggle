@@ -1,62 +1,45 @@
 <%= render "shared/header"%>
 
-  <div class='registration-main'>
+  <div id="user-show">
 
-
-  <h1><%= @nickname %>のページ</h1>
-
-  <% if user_signed_in? && @user == current_user %>
-    <%= link_to "プロフィール編集",  edit_user_path(current_user) %>
-  <% end %>
-
-    <div class='form-wrap'>
-
-      <div class="form-group">
-        <label class="form-text">ニックネーム</label>
-        <h2><%= @user.nickname %></h2>
-      </div>
-
-      <div class="form-select">
-        <h2><%= @user.age.name %></h2>
-      </div>
-
-
-      <div class="form-group">
-        <label class="form-text">都道府県</label>
-        <h2><%= @user.prefecture.name %></h2>
-      </div>
-
-      <div class="form-group">
-        <label class="form-text">市区町村</label>
-        <h2><%= @user.city %></h2>
-      </div>
-
+    <div class="user-icon">
+      <%= image_tag @user.image.url ,class:"icon_image" %>
     </div>
 
-    <div class='form-wrap'>
+    <div class="user-info">
+
+      <% if user_signed_in? && @user == current_user %>
+        <%= link_to("プロフィール編集",  edit_user_path(current_user), {class: "profile-edit"}) %>
+      <% end %>
+      
+      <div class="profile-group">
+        <label class="profile-text">ユーザー名：</label> <h2><%= @user.nickname %></h2>
+      </div>
+
+      <div class="profile-group">
+        <label class="profile-text">年齢：</label> <h2><%= @user.age.name %></h2>
+      </div>
+
+
+      <div class="profile-group">
+        <label class="profile-text">都道府県：</label> <h2><%= @user.prefecture.name %></h2>
+      </div>       
+
+      <div class="profile-group">
+        <label class="profile-text">市区町村：</label> <h2><%= @user.city %></h2>
+      </div>
 
       <% unless @dogs.presence %>  
         <strong><p>※※※ ワンちゃんが未登録です ※※※</p></strong>
-      <% end %>
-
-      <% @dogs.each do |dog| %>
-
-        <div class="form-group">
-          <label class="form-text">ワンちゃんのお名前</label>
-            <h2><%= link_to dog.name,  dog_path(dog.id) %></h2>
+      <% else %>
+        <div class="profile-group">
+          <label class="profile-text">ワンちゃんのお名前：</label> 
+          <% @dogs.each do |dog| %>
+            <h2><%= link_to dog.name, dog_path(dog.id) %></h2>
+          <% end %>
         </div>
+      <% end %>  
 
-        <div class="form-group">
-          <label class="form-text">犬種</label>
-          <h2><%= dog.type.name %></h2>
-        </div>
-
-        <div class="form-group">
-          <label class="form-text">性別</label>
-          <h2><%= dog.dog_sex.name %></h2>
-        </div>
-
-      <% end %>
     </div>
 
   </div>
