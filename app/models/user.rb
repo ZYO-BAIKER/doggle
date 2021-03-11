@@ -4,14 +4,15 @@ class User < ApplicationRecord
 
   has_many :dogs, dependent: :destroy
   has_many :comments, dependent: :destroy
-
+  has_one_attached :image
+  
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :sex
   belongs_to_active_hash :age
   belongs_to_active_hash :prefecture
   
   validates :nickname, presence: true, length: { maximum: 10 }
-  validates :city,  presence: true
+  validates :city,:image, presence: true
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
   validates_format_of :password, on: :create, with: PASSWORD_REGEX,  message: 'は半角英数字混合で入力して下さい'
