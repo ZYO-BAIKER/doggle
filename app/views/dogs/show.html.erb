@@ -1,24 +1,48 @@
 <%= render "shared/header"%>
 
-  <div class='registration-main'>
+  <div id="dog-show">
 
-    <div class='form-wrap'>
-
+    <div class="dog-info">
       <% @dogs.each do |dog| %>
-        <%= render partial: "dog", locals: { dog: dog } %>    
-      <% end %>
 
+        <% if dog.dog_sex_id == 2 %>
+          <h1><%= dog.name %>ちゃんのページ</h1>
+        <% elsif dog.dog_sex_id == 3 %>
+          <h1><%= dog.name %>くんのページ</h1>
+        <% end %>
+
+        <% if user_signed_in? && dog.user_id == current_user.id %>
+          <%= link_to("プロフィール編集",  edit_dog_path(dog.id), {class: "profile-edit"}) %>
+        <% end %>
+
+        <div class='dog-icon'>
+          <%= image_tag dog.image, class: "dog-img" %>
+        </div>
+
+        <div class="profile-group">
+          <label class="profile-text">犬種：</label> <h2><%= dog.type.name %></h2>
+        </div>
+        
+        <div class="profile-group">
+          <label class="profile-text">性別：</label> <h2><%= dog.dog_sex.name %></h2>
+        </div>
+
+        <div class="profile-group">
+          <label class="profile-text">特徴、嗜好、性格など：</label>
+          <div class="dog-explain-box">
+            <textarea class="dogs-text" readonly><%= dog.description %></textarea>
+          </div>
+        </div>
+
+      <% end %>
     </div>
     
     <div class="comment-box">
-
       <% if user_signed_in? %>
-
         <%= form_with(model: [@dog, @comment], local: true) do |form| %>
           <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
           <%= form.submit "SEND", id: "submit-btn" %>
         <% end %>
-      
       <% else %>
         <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
       <% end %>
