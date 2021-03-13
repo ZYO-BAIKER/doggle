@@ -48,7 +48,7 @@
           <%= form.submit "SEND", id: "submit-btn" %>
         <% end %>
       <% else %>
-        <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+        <strong><p>※※ コメントの投稿には新規登録/ログインが必要です ※※</p></strong>
       <% end %>
 
             <h4>＜コメント一覧＞</h4>
@@ -61,7 +61,7 @@
             <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
             <%= comment.text %>
 
-            <% if current_user.id == comment.user_id %>
+            <% if user_signed_in? && current_user.id == comment.user_id %>
               <%= link_to ":削除", "/dogs/#{@dog.id}/comments/#{comment.id}", method: :delete %>
             <% end %>
           </p>
