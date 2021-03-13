@@ -20,6 +20,10 @@
         </div>
 
         <div class="profile-group">
+          <label class="profile-text">親：</label> <h2><%= link_to dog.user.nickname, user_path(dog.user.id) %></h2>
+        </div>
+
+        <div class="profile-group">
           <label class="profile-text">犬種：</label> <h2><%= dog.type.name %></h2>
         </div>
         
