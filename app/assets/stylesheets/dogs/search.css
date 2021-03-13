@@ -1,0 +1,53 @@
+.result-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+  height: 87vh;
+  background-image: url("../bg.gif");
+  background-size: cover;
+}
+
+.result-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+  margin-bottom: 4vh;
+  color:  brown;
+}
+
+.dog-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dog-lists>.search-list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: unset;
+}
+
+.dog-img-content {
+  text-align: center;
+}
+
+.dog-img-content >.dog-img {
+  width: 240px;
+  height: 240px;
+  border-radius: 200px;
+  object-fit: cover;
+}
+
+.dog-info {
+  background-color: unset;
+  color: black;
+  padding: 1vw;
+  text-align: center;
+}
+
+.dog-name {
+  font-size: 2.5vh;
+  font-style: italic;
+}

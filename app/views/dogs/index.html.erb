@@ -1,19 +1,29 @@
 <%= render "shared/header" %>
 <div class='contents'>
 
-  <h2 class='title'>近所のイヌ友を探す</h2>
+  <h2 class='title'>イヌ友を探す</h2>
 
   <div class='search-bar-contents'>
 
-    <%= form_with(url: "/", local: true, method: :get, class: "search-form") do |form| %>
-
-      <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"user-prefecture"}) %>
-
-      <div class="search-city">
-        <%= form.text_field :keyword, placeholder: '市町村区を入力して下さい', class: 'input-box' %>
-        <button class="search-button"> <%= image_tag "search.png", class:"search-icon" %> </button>
-      </div>
-      
+    <%= search_form_for @p, url: dogs_search_path do |f| %>	
+      <%= f.label :user_prefecture_id_eq, '都道府県：' %>
+      <%= f.collection_select :user_prefecture_id_eq, @user_prefecture_id, :id, :name,  include_blank: '指定なし' %>
+      <br>
+      <%= f.search_field :name_cont, placeholder: '市町村区から探す', class: 'input-box' %>
+      <br>
+      <%= f.label :type_id_eq, '犬種：' %>
+      <%= f.collection_select :type_id_eq, @dog_type_id, :id, :name,  include_blank: '指定なし' %>
+      <br>
+      <%= f.label :dog_sex_id_eq, 'ワンちゃんの性別：' %>
+      <%= f.collection_select :dog_sex_id_eq, @dog_sex_id, :id, :name,  include_blank: '指定なし' %>
+      <br>
+      <%= f.label :user_age_id_eq, 'ユーザー年齢：' %>
+      <%= f.collection_select :user_age_id_eq, @user_age_id, :id, :name,  include_blank: '指定なし' %>
+      <br>
+      <%= f.label :user_sex_id_eq, 'ユーザー性別：' %>
+      <%= f.collection_select :user_sex_id_eq, @user_sex_id, :id, :name, include_blank: '指定なし' %>
+      <br>
+      <%= f.submit '検索' %>
     <% end %>
 
   </div>
