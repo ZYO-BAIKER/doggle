@@ -1,0 +1,24 @@
+<%= render "shared/header" %>
+<div class='result-contents'>
+
+  <h2 class='title'>検索結果だワン</h2>
+  <ul class='dog-lists'>
+    <% if @results.length !=0 %>
+      <% @results.each do |result| %>
+        <li class='search-list'>
+          <%= link_to dog_path(result.id) do %>
+            <div class='dog-img-content'>
+              <%= image_tag result.image, class: "dog-img" %>
+            </div>
+          <% end %>
+          <div class='dog-info'>
+            <h3 class='dog-name'> <%= result.name %> </h3>
+          </div>
+        </li>
+      <% end %>
+
+    <% else %>
+      該当件数が0だワン
+    <% end %>
+  </ul>
+</div>
