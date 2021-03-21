@@ -32,6 +32,15 @@
   width: 50%;
 }
 
+.profile-edit {
+  color: gray;
+  text-decoration: none;
+}
+
+.profile-edit:hover  {
+  color: darkred;
+}
+
 .user-info > .profile-group {
   width: 50%;
   display: flex;
@@ -51,6 +60,15 @@
   margin: 0 auto;
   width: 50%;
   font-size: 20px;
+}
+
+.profile-group h2 a {
+  color: lightsalmon;
+  text-decoration: none;
+}
+
+.profile-group h2 a:hover  {
+  color: darkred;
 }
 
 .user-info strong p {

@@ -27,6 +27,16 @@
   width: 37vh;
   padding: 1vw;
   background-color: unset;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all  0.3s ease;
+}
+
+.dog-lists>.search-list:hover {
+  color: darkred;
+  background:blanchedalmond;
+  padding: 35px;
 }
 
 .dog-img-content {
