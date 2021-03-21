@@ -54,6 +54,11 @@
   resize: none;
 }
 
+.input-default:hover {
+  color: darkred;
+  background:blanchedalmond;
+}
+
 .info-text {
   color: #888;
   font-size: 13px;
@@ -79,6 +84,11 @@
   color: #888888e0;
 }
 
+.select-box:hover {
+  color: darkred;
+  background:blanchedalmond;
+}
+
 .register-btn {
   width: 50%;
   margin: 0 auto;
@@ -91,6 +101,11 @@
   border: 1px solid #7f5554;
   color: #866d6d;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 19px;
   cursor: pointer;
+}
+
+.reg-btn:hover {
+  color: darkred;
+  background:azure;
 }

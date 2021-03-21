@@ -35,6 +35,11 @@
   font-family: "游ゴシック", "YuGothic";
 }
 
+.dog_search input:hover {
+  color: darkred;
+  background:blanchedalmond;
+}
+
 .dog_search label {
   color: antiquewhite;
   font-size: 25px;
@@ -47,4 +52,9 @@
   font-size: 19px;
   font-family: "游ゴシック", "YuGothic";
   border-radius: 4px;
+}
+
+.dog_search select:hover {
+  color: darkred;
+  background:blanchedalmond;
 }

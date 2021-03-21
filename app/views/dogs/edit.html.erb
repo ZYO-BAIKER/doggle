@@ -14,6 +14,8 @@
       </div>
     </div>
 
+    <%= link_to '登録解除', dog_path, method: :delete, class:'dog-destroy' %>
+    
     <div class="new-dogs">
       <div class="weight-bold-text">名前</div>
       <%= f.text_field :name, class:"dogs-text", id:"dogs-name", placeholder:"ワンちゃんのお名前", maxlength:"20" %>
@@ -33,8 +35,6 @@
     <div class="register-btn">
       <%= f.submit "入力完了" ,class:"reg-btn" %>
     </div>
-
-    <%= link_to '登録解除', dog_path, method: :delete, class:'dog-destroy' %>
 
   <% end %>
 

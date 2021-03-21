@@ -86,6 +86,11 @@ form input, form textarea {
   font-family: "游ゴシック", "YuGothic";
 }
 
+#submit-btn:hover  {
+  color: darkred;
+  background:blanchedalmond;
+}
+
 .comment-box > h4 {
   line-height: 1.57;
   letter-spacing: 0.15em;
@@ -102,5 +107,10 @@ form input, form textarea {
 }
 
 .comments a {
-  color: #57C3E9;
+  color: gray;
+  text-decoration: none;
+}
+
+.comments a:hover  {
+  color: darkred;
 }
