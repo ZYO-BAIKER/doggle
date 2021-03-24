@@ -26,6 +26,8 @@ https://gyazo.com/b0bd9af9442237ef8419732e6ac417d5
 ・非同期通信のコメント動画
 https://gyazo.com/bbfafdab20d69fbf47cc3af5a1002dff
 
+・検索結果動画
+https://gyazo.com/985ee411a73783b8893615efe43d94f8
 
 # 工夫したポイント
   HTML・CSSを一から自分で考えて作成したのは初めてだったので、最初はそこに戸惑いました。<br>
