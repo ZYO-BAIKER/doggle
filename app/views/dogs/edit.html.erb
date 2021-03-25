@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <%= link_to '登録解除', dog_path, method: :delete, class:'dog-destroy' %>
+    <%= link_to '登録解除', dog_path, method: :delete, data: { confirm: "ワンちゃんの登録を解除しますか？" }, class:'dog-destroy' %>
     
     <div class="new-dogs">
       <div class="weight-bold-text">名前</div>
