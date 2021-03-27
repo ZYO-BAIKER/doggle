@@ -65,3 +65,4 @@ gem 'devise'
 gem 'rails-i18n'
 gem 'carrierwave'
 gem 'ransack'
+gem "aws-sdk-s3", require: false
