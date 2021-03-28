@@ -21,6 +21,6 @@ class User < ApplicationRecord
     validates :sex_id, :age_id, :prefecture_id
   end
 
-  mount_uploader :avatar, AvatarUploader
+  # mount_uploader :avatar, AvatarUploader
   
 end
