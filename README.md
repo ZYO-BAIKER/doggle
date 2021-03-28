@@ -34,6 +34,8 @@ https://gyazo.com/985ee411a73783b8893615efe43d94f8
   お手本にあるようなおしゃれなサイトを作成するには、まだ技術が追いついていないので、Canvaを使いロゴだけでも華やかにしました。<br>
   また、検索機能に様々な条件を付与するのに、ransackを用いましたが、userテーブルとdogsテーブルからそれぞれのカラムから検索させて出力させるのに苦労しました。<br>
   
+# 使用技術(開発環境)
+  Ruby / Ruby on Rails / MySQL / GitHub / Heroku / Visual Studio Code / Trello/Java script / AWS
 
 # 実装予定の内容
   ・jQuaryを使って、各ページの見た目を飾る
