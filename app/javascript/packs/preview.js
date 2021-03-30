@@ -1,4 +1,4 @@
-if (document.URL.match( /new/ ) ) {
+if ( document.URL.match( /new/ ) || document.URL.match( /sign_up/ ) )  {
 
   document.addEventListener('DOMContentLoaded', function(){
     const ImageList = document.getElementById('image-list');
