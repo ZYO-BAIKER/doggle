@@ -1,6 +1,6 @@
 .registration-user {
   width: 100%;
-  min-width: 800px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +14,18 @@
   margin-top: 50px;
 }
 
+.img-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+.img-upload > .click-upload>p {
+  margin-bottom: 15px;
+}
+
 .img-upload > .click-upload {
-  margin: 15px 0;
   min-width: 250px;
   margin: 0 auto;
 }

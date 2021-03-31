@@ -4,6 +4,11 @@
   font-weight: revert;
 }
 
+.dogs-deta {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 0;
+}
 
 .dogs-deta >.select-box {
   height: 30px;

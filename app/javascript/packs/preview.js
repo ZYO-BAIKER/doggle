@@ -1,4 +1,4 @@
-if ( document.URL.match( /new/ ) || document.URL.match( /sign_up/ ) )  {
+if ( document.URL.match( /new/ ) || document.URL.match( /sign_up/ ) || document.URL.match( /edit/ ) )  {
 
   document.addEventListener('DOMContentLoaded', function(){
     const ImageList = document.getElementById('image-list');
@@ -19,7 +19,7 @@ if ( document.URL.match( /new/ ) || document.URL.match( /sign_up/ ) )  {
      ImageList.appendChild(imageElement);
    };
 
-    document.getElementById("dog-image").addEventListener('change', function(e){
+    document.getElementById("show-image").addEventListener('change', function(e){
 
       // 画像が表示されている場合のみ、すでに存在している画像を削除する
       const imageContent = document.querySelector('img');

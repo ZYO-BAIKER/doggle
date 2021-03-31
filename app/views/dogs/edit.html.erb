@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-<div class='registration-dog'>
+<div class='registration-user'>
   <%= form_with(model: @dog, local: true) do |f| %>
   <%= render 'shared/error_messages', model: f.object %>
 
@@ -9,7 +9,7 @@
     <div class="img-upload">
       <div class="click-upload">
         <p>ワンちゃんの画像をアップしてください</p>
-        <%= f.file_field :image, id:"dog-image" %>
+        <%= f.file_field :image, id:"show-image" %>
         <div id="image-list"></div>
       </div>
     </div>
