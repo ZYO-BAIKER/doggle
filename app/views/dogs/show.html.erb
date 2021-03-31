@@ -16,7 +16,11 @@
         <% end %>
 
         <div class='dog-icon'>
-          <%= image_tag dog.image, class: "dog-img" %>
+          <% if dog.images.attached? %>
+            <% dog.images.each do |image| %>
+              <%= image_tag image, class: "dog-img" %>
+            <% end %>
+          <% end %>
         </div>
 
         <div class="profile-group">

@@ -1,5 +1,5 @@
 class Dog < ApplicationRecord
-  has_one_attached :image
+  has_many_attached :images
   belongs_to :user
   has_many :comments, dependent: :destroy
 
@@ -8,7 +8,7 @@ class Dog < ApplicationRecord
   belongs_to_active_hash :type
 
   with_options presence: true do
-    validates :image, :name, :description
+    validates :images, :name, :description
   end
 
   with_options numericality: { other_than: 1, message: 'を選んで下さい' } do

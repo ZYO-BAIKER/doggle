@@ -10,7 +10,7 @@ ja:
         age_id: 年齢層
 
       dog:
-        image: ワンちゃんの画像
+        images: ワンちゃんの画像
         name: ワンちゃんのお名前
         type_id: 犬種
         dog_sex_id: ワンちゃんの性別
