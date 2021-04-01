@@ -1,4 +1,4 @@
-if ( document.URL.match( /dogs/ )  )  {
+if ( ( document.URL.match( /dogs/ ) && document.URL.match( /new/ ) ) || ( document.URL.match( /dogs/ ) && document.URL.match( /edit/ ) ) ) {
 
   document.addEventListener('DOMContentLoaded', function(){
     const ImageList = document.getElementById('image-list');
@@ -47,7 +47,7 @@ if ( document.URL.match( /dogs/ )  )  {
  
 }
 
-if (  document.URL.match( /users/ )  )  {
+if ( ( document.URL.match( /sign_up/ )  ) || ( document.URL.match( /users/ ) && document.URL.match( /edit/ ) ) ) {
 
   document.addEventListener('DOMContentLoaded', function(){
     const ImageList = document.getElementById('image-list');
