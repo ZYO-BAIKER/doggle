@@ -8,7 +8,9 @@
         <li class='search-list'>
           <%= link_to dog_path(result.id) do %>
             <div class='dog-img-content'>
-              <%= image_tag result.images[0], class: "dog-img" %>
+              <% result.images.each do |image| %>
+                <%= image_tag image, class: "dog-img" %>
+              <% end %>
             </div>
           <% end %>
           <div class='dog-info'>
