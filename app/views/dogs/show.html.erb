@@ -17,9 +17,11 @@
 
         <div class='dog-icon'>
           <% if dog.images.attached? %>
-            <% dog.images.each do |image| %>
-              <%= image_tag image, class: "dog-img" %>
-            <% end %>
+            <ul class="bxslider">
+              <% dog.images.each do |image| %>
+                <li><%= image_tag image, class: "dog-img" %></li>
+              <% end %>
+            </ul>
           <% end %>
         </div>
 
