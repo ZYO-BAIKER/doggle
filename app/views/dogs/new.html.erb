@@ -8,7 +8,7 @@
     <div class="img-upload">
       <div class="click-upload">
         <p>ワンちゃんの画像をアップしてください</p>
-        <%= f.file_field :image, id:"show-image" %>
+        <%= f.file_field :images, id:"show-image", multiple: true %>
         <div id="image-list"></div>
       </div>
     </div>
