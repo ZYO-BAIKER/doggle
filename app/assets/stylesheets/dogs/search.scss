@@ -4,7 +4,7 @@
   align-items: center;
   padding: 10vh 0;
   height: 100vh;
-  background-image: image-url("bg.gif");
+  background-image: image-url("alvan-nee-T-0EW-SEbsE-unsplash.jpg");
   background-size: cover;
 }
 
@@ -35,7 +35,7 @@
 
 .dog-lists>.search-list:hover {
   color: darkred;
-  background:blanchedalmond;
+  background:tan;
   padding: 35px;
 }
 
@@ -52,12 +52,12 @@
 
 .dog-info {
   background-color: unset;
-  color: black;
   padding: 1vw;
   text-align: center;
 }
 
 .dog-name {
-  font-size: 2.5vh;
+  font-size: 3.5vh;
   font-style: italic;
+  color: cornsilk;
 }

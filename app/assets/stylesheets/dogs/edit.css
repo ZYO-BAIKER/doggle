@@ -4,7 +4,6 @@
   font-weight: revert;
 }
 
-
 .dogs-deta >.select-box {
   height: 30px;
   width: 50%;
@@ -16,8 +15,13 @@
   color: unset;
 }
 
-.dog-destroy {
-  color: gray;
+.destory {
+  text-align: center;
+}
+
+.destory > .dog-destroy {
+  color: red;
+  font-size: larger;
   text-decoration: none;
 }
 
