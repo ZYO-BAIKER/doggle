@@ -1,17 +1,12 @@
-.registration-user {
-  width: 100%;
+.form-wrap {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: image-url("bg.gif");
 }
 
-.registration-user>.form-wrap {
-  width: 50%;
-  padding-bottom: 20px;
-  height: 100%;
-  margin-top: 50px;
+.form-wrap >.registration-user {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 50px;
 }
 
 .img-upload {
