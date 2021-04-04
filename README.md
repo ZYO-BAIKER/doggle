@@ -6,14 +6,14 @@ Doggle
 コミュニケーションツール
 
 # 本番環境(デプロイ先テストアカウント＆ID)
-  接続先： https://doogle-28664.herokuapp.com/
-  認証ID/Pass:  admin / 2222<br>
+  ○接続先： https://doogle-28664.herokuapp.com/　<br>
+  ○認証ID/Pass:  admin / 2222<br>
   
-  テスト用アカウント:<br>
+  ○テスト用アカウント<br>
         メールアドレス: sample@sample.com<br>
         パスワード: sample2<br>
 
-  Githubリポジトリ
+  ○Githubリポジトリ<br>
     https://github.com/ZYO-BAIKER/doggle-28664
 
 # 制作背景(意図)
