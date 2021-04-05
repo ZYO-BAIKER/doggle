@@ -1,0 +1,33 @@
+.bg_image2 {
+  background-image: image-url("alvan-nee-T-0EW-SEbsE-unsplash.jpg");
+  background-size: cover;
+  height: 100vh;
+  opacity: 0.7;
+}
+
+section.resume-section {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 75rem;
+  height: 60vh;
+}
+
+.resume-section-content {
+    margin: 0 auto;
+}
+
+h2.mb-5.fas.fa-paw {
+  color:orangered;
+  font-size: 3.5rem;
+}
+
+.mb-5, .my-5 {
+  margin-bottom: 3rem !important;
+}
+
+.flex-grow-1 {
+  color: whitesmoke;
+  font-size: x-large;
+  font-weight: bold;
+}
