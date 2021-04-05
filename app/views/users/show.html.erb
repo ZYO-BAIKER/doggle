@@ -8,9 +8,11 @@
 
     <div class="user-info">
 
-      <% if user_signed_in? && @user == current_user %>
-        <%= link_to("プロフィール編集",  edit_user_path(current_user), {class: "profile-edit"}) %>
-      <% end %>
+      <div class="profile-group">
+        <% if user_signed_in? && @user == current_user %>
+          <%= link_to("プロフィール編集",  edit_user_path(current_user), {class: "profile-edit fas fa-user-edit"}) %>
+        <% end %>
+      </div>
       
       <div class="profile-group">
         <label class="profile-text">ユーザー名：</label> <h2><%= @user.nickname %></h2>
@@ -33,12 +35,12 @@
       </div>
 
       <% unless @dogs.presence %>  
-        <strong><p>※※※ ワンちゃんが未登録です ※※※</p></strong>
+        <strong><p><%= link_to "ワンちゃんが未登録です", new_dog_path, class: "fas fa-dog" %></p></strong>
       <% else %>
         <div class="profile-group">
           <label class="profile-text">ワンちゃんのお名前：</label> 
           <% @dogs.each do |dog| %>
-            <h2><%= link_to dog.name, dog_path(dog.id) %></h2>
+            <h2><%= link_to dog.name, dog_path(dog.id), class: "fas fa-paw" %></h2>
           <% end %>
         </div>
       <% end %>  

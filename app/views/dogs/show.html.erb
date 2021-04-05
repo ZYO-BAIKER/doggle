@@ -6,13 +6,13 @@
       <% @dogs.each do |dog| %>
 
         <% if dog.dog_sex_id == 2 %>
-          <h1><%= dog.name %>ちゃんのページ</h1>
+          <h1 class="fas fa-dog"><%= dog.name %>ちゃんのページ</h1>
         <% elsif dog.dog_sex_id == 3 %>
-          <h1><%= dog.name %>くんのページ</h1>
+          <h1 class="fas fa-dog"><%= dog.name %>くんのページ</h1>
         <% end %>
 
         <% if user_signed_in? && dog.user_id == current_user.id %>
-          <%= link_to("プロフィール編集",  edit_dog_path(dog.id), {class: "profile-edit"}) %>
+          <%= link_to("プロフィール編集",  edit_dog_path(dog.id), {class: "profile-edit fas fa-edit"}) %>
         <% end %>
 
         <div class='dog-icon'>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="profile-group">
-          <label class="profile-text">親：</label> <h2><%= link_to dog.user.nickname, user_path(dog.user.id) %></h2>
+          <label class="profile-text">親：</label> <h2><%= link_to dog.user.nickname, user_path(dog.user.id), class: "far fa-user" %></h2>
         </div>
 
         <div class="profile-group">

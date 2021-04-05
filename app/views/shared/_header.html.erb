@@ -10,17 +10,19 @@
 
   <div class='nav'>
     <ul class='lists-right'>
-        <div class="header-image">
-          <%= link_to image_tag("xoxo.png", class:"pettle-icon"), '/' %>
-        </div>
+      <div class="header-image">
+        <%= link_to image_tag("xoxo.png", class:"pettle-icon"), '/' %>
+      </div>
+
+        <li><%= link_to "Doggleとは？", dogs_experience_path, class: "fas fa-paw" %> </li>
       <% if user_signed_in? %>
-        <li><%= link_to current_user.nickname, user_path(current_user), class: "list-item" %> </li>
-        <li><%= link_to "愛犬を紹介", new_dog_path, class: "list-item" %> </li>
-        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "list-item" %></li>
-        <li><%= link_to "退会", user_registration_path, method: :delete, data: { confirm: "アカウント消すの？" }, class: "list-item" %></li>
+        <li><%= link_to current_user.nickname, user_path(current_user), class: "far fa-user" %> </li>
+        <li><%= link_to "愛犬を紹介", new_dog_path, class: "fas fa-dog" %> </li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "fas fa-sign-out-alt" %></li>
+        <li><%= link_to "退会", user_registration_path, method: :delete, data: { confirm: "アカウント消すの？" }, class: "fas fa-bomb" %></li>
       <% else %>
-        <li><%= link_to '新規登録', new_user_registration_path, class: "list-item" %></li>
-        <li><%= link_to 'ログイン', new_user_session_path, class: "list-item" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "fas fa-user-plus" %></li>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "fas fa-sign-in-alt" %></li>
       <% end %>
     </ul>
   </div>

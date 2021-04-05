@@ -53,6 +53,9 @@ class DogsController < ApplicationController
     @results = @p.result.includes(:user)  # 検索条件にマッチした商品の情報を取得
   end
 
+  def experience
+  end
+
   private
 
   def dog_params

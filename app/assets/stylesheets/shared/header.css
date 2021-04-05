@@ -31,7 +31,7 @@
 .nav {
   flex-wrap: wrap;
   width: 100%;
-  margin: 2vh 0 2vh 180px;
+  margin: 2vh 0 2vh 100px;
 }
 
 .lists-right {
@@ -40,12 +40,17 @@
   font-size: 23px;
 }
 
-.list-item {
+.fa, .fas, .far {
+  font-weight: 900;
   text-decoration: none;
-  color:  lightsalmon;
+  color: lightsalmon;
   margin: 0 2vw;
 }
 
-.list-item:hover {
+.fas:hover  {
+  color: darkred;
+}
+
+.far:hover {
   color: darkred;
 }

@@ -23,7 +23,7 @@
       <%= f.label :user_sex_id_eq, 'ユーザー性別：' %>
       <%= f.collection_select :user_sex_id_eq, @user_sex_id, :id, :name, include_blank: '指定なし' %>
       <br>
-      <%= f.submit '検索' %>
+      <%= f.submit '検索', class:"submit_btn" %>
     <% end %>
 
   </div>
