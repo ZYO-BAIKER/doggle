@@ -6,7 +6,7 @@ Doggle
 コミュニケーションツール
 
 # 本番環境(デプロイ先テストアカウント＆ID)
-  ○接続先： https://doogle-28664.herokuapp.com/　<br>
+  ○接続先： https://doogle-28664.herokuapp.com/
   ○認証ID/Pass:  admin / 2222<br>
   
   ○テスト用アカウント<br>
