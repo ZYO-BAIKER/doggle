@@ -1,19 +1,12 @@
-<div class="flower flowerR">
-  <%= link_to image_tag("top_flower.png", width:"257") %>
-</div>
+<header>
 
-<div class="flower flowerL">
-  <%= link_to image_tag("top_flower.png", width:"257")%>
-</div>
-
-<header class='top-page-header'>
+  <div class="flower flowerR">
+    <%= link_to image_tag("top_flower.png", width:"257") %>
+  </div>
 
   <div class='nav'>
-    <ul class='lists-right'>
-      <div class="header-image">
-        <%= link_to image_tag("xoxo.png", class:"pettle-icon"), '/' %>
-      </div>
-
+    <%= link_to image_tag("icon.png", class:"pettle-icon"), '/' %>
+    <ul class='lists'>
         <li><%= link_to "Doggleとは？", dogs_experience_path, class: "fas fa-paw" %> </li>
       <% if user_signed_in? %>
         <li><%= link_to current_user.nickname, user_path(current_user), class: "far fa-user" %> </li>
