@@ -1,11 +1,10 @@
 <header>
-
   <div class="flower flowerR">
     <%= link_to image_tag("top_flower.png", width:"257") %>
   </div>
 
   <div class='nav'>
-    <%= link_to image_tag("icon.png", class:"pettle-icon"), '/' %>
+    <%= link_to image_tag("icon.png"), '/' %>
     <ul class='lists'>
         <li><%= link_to "Doggleとは？", dogs_experience_path, class: "fas fa-paw" %> </li>
       <% if user_signed_in? %>
@@ -19,5 +18,4 @@
       <% end %>
     </ul>
   </div>
-
 </header>
