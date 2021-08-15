@@ -7,34 +7,31 @@
 
     <link rel="stylesheet" href="app/assets/stylesheets/jquery.bxslider.css">
 		<link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-	<script>
-		$(function(){
-			$('.bxslider').bxSlider({
-        auto: true,
-				mode: 'fade',
-				speed: "1000"
+		<script>
+			$(function(){
+				$('.bxslider').bxSlider({
+					auto: true,
+					mode: 'fade',
+					speed: "1000"
+				});
 			});
-		});
-	</script>
-
-	<script>
-		$(function(){
-			$('.dog-img-content').bxSlider({
-        auto: true,
-				mode: 'fade',
-				speed: "1000"
+		</script>
+		<script>
+			$(function(){
+				$('.dog-img-content').bxSlider({
+					auto: true,
+					mode: 'fade',
+					speed: "1000"
+				});
 			});
-		});
-	</script>
-
+		</script>
   </head>
 
   <body>
