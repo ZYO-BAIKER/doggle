@@ -1,5 +1,5 @@
 .bg_image2 {
-  background-image: image-url("alvan-nee-T-0EW-SEbsE-unsplash.jpg");
+  background-image: url("top.jpg");
   background-size: cover;
   height: 100vh;
   opacity: 0.7;
